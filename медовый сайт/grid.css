@@ -1,0 +1,16 @@
+.grid {
+    margin-top:20px;
+    display:grid;
+    grid-template-columns:repeat(auto-fit,290px);
+    grid-template-rows: repeat(auto-fit,auto);
+    grid-gap:15px;
+    width:97%;
+    margin-left:50%;
+    height:auto;
+    transform:translate(-50%);
+    justify-content:center;
+}
+.grid .item {
+    justify-self:center;
+    align-self:center;
+}

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Меню</title>
+        <link href="style.css" rel="stylesheet" type="text/css">
+        <link href="menustyle.css" rel="stylesheet" type="text/css">
+        <link href="menumedia.css" rel="stylesheet" type="text/css">
+        <link href="cart.css" rel="stylesheet" type="text/css">
+    </head>
+    <body>
+        <div class="background" ></div>
+        <div class="top-panel">
+            <h1 class="logo">МЕДОВИК</h1>
+            <div class="center-field" style="height:inherit;">
+                <input type="button" class="top-button" value="Главная" ">
+                <input type="button" class="top-button" value="Корзина" onclick="ToggleCart(true)"">
+                <input type="button" class="top-button" value="О нас">
+            </div>
+            <input type="button" class="burger-button" onclick="BurgerbuttonClick()">
+            <div class="flow-panel">
+                <input type="button" value="Корзина" onclick="ToggleCart(true)">
+                <input type="button" value="О нас">
+            </div>
+        </div>
+
+        <div class="line-array"></div>
+
+        <div class="main-block">
+            <div class="star">
+                <div class="crystal" onmouseover="CrystalOver()" onmouseout="CrystalOut()"></div>
+                <div id="firstcontainer">
+                    <div class="element" id="first">
+                        <img src="images/гречишный_мёд.jpg">
+                        <p>мед</p>
+                    </div>
+                </div>
+                <div id="secondAndThird">
+                    <div class="element" id="second" >
+                        <img src="images/гречишный_мёд.jpg">
+                        <p>мед</p>
+                    </div>
+                    <div class="element" id="third" >
+                        <img src="images/гречишный_мёд.jpg">
+                        <p>мед</p>
+                    </div>
+                </div>
+                <div id="fourthAndFifth">
+                    <div class="element" id="fourth" >
+                        <img src="images/гречишный_мёд.jpg">
+                        <p>мед</p>
+                    </div>
+                    <div class="element" id="fifth" >
+                        <img src="images/гречишный_мёд.jpg">
+                        <p>мед</p>
+                    </div>
+                </div>
+            </div>
+            <div class="simpleView">
+                <div class="simpleElement" >
+                    <img src="images/гречишный_мёд.jpg">
+                    <p>мед</p>
+                </div>
+                <div class="simpleElement">
+                    <img src="images/гречишный_мёд.jpg">
+                    <p>мед</p>
+                </div>
+                <div class="simpleElement" >
+                    <img src="images/гречишный_мёд.jpg">
+                    <p>мед</p>
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="article" id="cart" >
+            <p class="cart-header">Корзина</p>
+            <div class="cart-list">
+                
+            </div>
+            <div class="buttons">
+                <input type="button" value="Назад" onclick="ToggleCart(false)">
+                <input type="button" value="Оплата" id="pay_button">
+            </div>
+        </div>
+
+        <script src="cart.js"></script>
+        <script src="menuscript.js"></script>
+    </body>
+</html>

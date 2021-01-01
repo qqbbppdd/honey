@@ -1,0 +1,199 @@
+* {
+
+}
+.star {
+    position:relative;
+    margin-left:50%;
+    transform:translate(-50%);
+    width:100%;
+    margin-top:20px;
+    z-index:2;
+}
+
+.star #firstcontainer {
+    display: flex;
+    justify-content:center;
+}
+.star #second {
+    margin-right:350px;
+}
+.star #secondAndThird {
+    margin-top:45px;
+    display: flex;
+    justify-content:center;
+}
+.star #fourth {
+    margin-right:175px;
+}
+.star #fourthAndFifth {
+    margin-top:100px;
+    display: flex;
+    justify-content:center;
+}
+
+/* !!!STAR ELEMENT!!! */
+.star .element {
+    display:flex;
+    position:relative;
+    width:150px;
+    height:150px;
+    display:flex;
+    border:solid 1px black;
+    margin:0;
+    border-radius:50%;
+    border:solid 1px black;
+    box-shadow:0px 0px 7px 0px black;
+    transition:all .4s,margin 0s,filter 0.5s,box-shadow 1s;
+    overflow:hidden;
+    justify-content:center;
+}
+.star .element.scale {
+    animation: elementScaling 0.45s;
+}
+@keyframes elementScaling {
+    from {
+        opacity:0%;
+        transform:scale(0.2);
+        box-shadow:0px 0px 1px 0px black;
+    }
+    50% {
+        opacity:100%;
+    }
+    to {
+        transform:scale(1);
+        box-shadow:0px 0px 7px 0px black;
+    }
+}
+.star .element img {
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    border-radius:inherit;
+    transition:filter 0.4s,transform 0.4s,box-shadow 0.4s;
+}
+.star .element p {
+    opacity:0%;
+    position:absolute;
+    margin:0;
+    align-self:center;
+    user-select:none;
+    cursor:default;
+    font:normal 35px arial;
+    color:white;
+    /*
+    text-shadow:1px 1px 1px white, -1px -1px 1px white,1px -1px 1px white, -1px 1px 1px white;
+    */
+    transition:all .5s,font-size .6s,color 0.4s;
+    transition-delay:0.2s;
+}
+.star .element p:hover {
+    color:#ffcd62;
+}
+.star .element:hover p {
+    visibility:visible;
+    opacity:100%;
+    font-size:42px;
+    text-shadow:0px 0px 2px white;
+}
+.star .element:hover {
+    transform:scale(1.1);
+    box-shadow:0px 0px 9px 1px black;
+}
+.star .element:hover img {
+    filter:brightness(50%);
+    transform:scale(1.15);
+}
+.line {
+    margin:0;
+    height:40px;
+    width:200px;
+    position:absolute;
+    top:-200px;
+    left:0px;
+    transform-origin:0 20px;
+    background:linear-gradient(to bottom, #00000000,#f09819,#00000000);
+    transition:filter 0.5s;
+    animation: LineAppear 1s both;
+    z-index:1;
+}
+.line-array {
+    position:absolute;
+}
+@keyframes LineAppear {
+    from {
+        opacity:0%;
+    }
+    to{
+        opacity:100%;
+    }
+}
+
+/* КРИСТАЛ */
+.crystal {
+    position:absolute;
+    width:96px;
+    height:96px;
+    user-select:none;
+    left:calc(50% - 48px);
+    top:calc(50% - 48px);
+    animation: CrystalAppear 1.3s;
+    background-image:radial-gradient(#b16315,#DB7818);
+    transform:rotate(45deg);
+    border:solid 1px #5a3005;
+    transition:all .4s, box-shadow 1s;
+    filter:brightness(90%);
+    box-shadow:0px 0px 2px 0px #752c02;
+    opacity:75%;
+}
+.crystal:hover {
+    filter:brightness(100%);
+    opacity:100%;
+    box-shadow:0px 0px 20px 4px white;
+}
+@keyframes CrystalAppear {
+    from {
+        opacity:0%;
+    }
+    to{
+        opacity:75%;
+    }
+}
+
+
+.simpleView {
+    width:100%;
+    height:auto;
+    display:none;
+}
+/* SIMPLE ELEMENT!!! */
+
+.simpleView .simpleElement {
+    border:solid 1px black;
+    width:450px;
+    height:355px; 
+    margin-left:50%;
+    transform:translate(-50%);
+    background:linear-gradient(45deg,#e98828,#ffc446);
+    margin-top:15px;
+}
+
+.simpleView .simpleElement p {
+    margin-top:0;
+    text-align:center;
+    cursor:default;
+    font:normal 30px arial;
+    
+}
+.simpleView .simpleElement img {
+    user-select:none;
+    pointer-events: none;
+    object-fit:cover;
+    width:94%;
+    height:300px;
+    margin-top:10px;
+    margin-bottom:0;
+    margin-left:3%;
+    border:solid 1px black;
+    
+}
+

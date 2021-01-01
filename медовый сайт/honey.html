@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <link rel="stylesheet" type="text/css" href="grid.css">
+        <link rel="stylesheet" type="text/css" href="media.css">
+        <link rel="stylesheet" type="text/css" href="cart.css">
+        <title>document</title>
+    </head>
+    <body>
+        <div class="background"></div>
+        <div class="top-panel">
+            <h1 class="logo">МЕДОВИК</h1>
+            <div class="center-field" style="height:inherit;">
+                <input type="button" class="top-button" value="Главная" onclick="location.href='menu.html'">
+                <input type="button" class="top-button" value="Корзина" onclick="ToggleCart(true)"">
+                <input type="button" class="top-button" value="О нас">
+            </div>
+            <input type="button" class="burger-button" onclick="BurgerbuttonClick()">
+            <div class="flow-panel" onclick="BurgerbuttonClick(ignore_dialog=true)">
+                <input type="button" value="Корзина" onclick="ToggleCart(true)">
+                <input type="button" value="О нас">
+            </div>
+        </div>       
+        <div class="main-block" style="margin-top:15px;">
+            <h1 class="header">Товары</h1>
+            <h1 class="subheader">Категории "медовый рай"</h1>
+            <div class="grid">
+            </div>
+        </div>
+        <div class="article" id="a1" onclick="ToggleArticle('a1',false)">
+        </div>
+        <div class="article" id="cart" >
+            <p class="cart-header">Корзина</p>
+            <div class="cart-list">
+                
+            </div>
+            <div class="buttons">
+                <input type="button" value="Назад" onclick="ToggleCart(false)">
+                <input type="button" value="Оплата" id="pay_button">
+            </div>
+        </div>
+
+        <h1 class="alert-title">Добавлено!</h1>
+
+        <script src="cart.js"></script>
+        <script src="script.js"></script>
+    </body>
+</html>
