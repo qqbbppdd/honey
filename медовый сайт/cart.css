@@ -134,14 +134,14 @@
     border:solid 1px black;
     width:200px;
     font:normal 28px arial;
- 
-    background:linear-gradient(60deg,#ffc446,#c28a11);
+    cursor:pointer;
+    background:#ffc446;
     transition:.4s;
     background-size:200%;
     background-position: bottom left;
 }
 #cart .buttons input:hover {
-    background-position:top right;
+    background:#da9a12;
 }
 #cart .buttons input:last-child {
     margin-left:100px;
